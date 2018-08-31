@@ -1,5 +1,7 @@
 # Pushover Console
 
+**Under development**
+
 Intercepts messages to console and sends them to Pushover.
 
 ## Installation
