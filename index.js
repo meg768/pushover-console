@@ -11,7 +11,6 @@ var pushoverConsole = module.exports = function(options) {
 
 	options = options || {};
 
-	var util    = require('util');
 	var user    = options.user ? options.user : process.env.PUSHOVER_USER;
 	var token   = options.token ? options.token : process.env.PUSHOVER_TOKEN;
 
