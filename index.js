@@ -1,5 +1,5 @@
 var util    = require('util');
-var methods = ['log', 'info', 'warn', 'error'];
+var methods = ['info', 'warn', 'error'];
 var output  = {};
 
 methods.forEach(name => {
@@ -39,16 +39,14 @@ var pushoverConsole = module.exports = function(options) {
 		};
 
 		methods.forEach(name => {
-			if (name != 'log') {
-				var method = output[name];
+			var method = output[name];
 
-				console[name] = function() {
-					var text = util.format.apply(util.format, arguments);
+			console[name] = function() {
+				var text = util.format.apply(util.format, arguments);
 
-					send({priority:name == 'info' ? 0 : 1, message:text});
-				    return method.apply(console, [text]);
-				};
-			}
+				send({priority:name == 'info' ? 0 : 1, message:text});
+			    return method.apply(console, [text]);
+			};
 		});
 
 	}
