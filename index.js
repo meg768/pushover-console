@@ -3,7 +3,7 @@ var util = require('util');
 var methods = ['info', 'warn', 'error'];
 var output = {};
 
-methods.forEach(name => {
+methods.forEach(function(name) {
 	output[name] = console[name];
 });
 
