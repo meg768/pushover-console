@@ -38,7 +38,7 @@ var pushoverConsole = module.exports = function(options) {
 			}
 		};
 
-		methods.forEach(name => {
+		methods.forEach(function(name) {
 			var method = output[name];
 
 			console[name] = function() {
