@@ -1,6 +1,7 @@
-var util    = require('util');
+var PushoverNotifications = require('pushover-notifications');
+var util = require('util');
 var methods = ['info', 'warn', 'error'];
-var output  = {};
+var output = {};
 
 methods.forEach(name => {
 	output[name] = console[name];
@@ -22,7 +23,6 @@ var pushoverConsole = module.exports = function(options) {
 		function send(payload) {
 			try {
 
-				var PushoverNotifications = require('pushover-notifications');
 				var push = new PushoverNotifications({user:user, token:token});
 
 				// See https://pushover.net/api for payload parameters
