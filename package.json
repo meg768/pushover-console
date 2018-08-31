@@ -12,7 +12,8 @@
   },
   "keywords": [
     "pushover",
-    "console"
+    "console",
+    "pushover-notifications"
   ],
   "author": "",
   "license": "ISC",
