@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/meg768/pushover-console.git"
   },
+  "keywords": [
+    "pushover",
+    "console"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
